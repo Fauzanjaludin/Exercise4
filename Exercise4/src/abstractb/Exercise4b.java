@@ -22,7 +22,7 @@ class bankC extends bank{
 	}
 }
 
-public class Exercise3b {
+public class Exercise4b {
 
 	public static void main(String[] args) {
 		bankA a=new bankA();

@@ -19,7 +19,7 @@ class secSC extends parent{
 	}
 }
 
-public class Exercise3a {
+public class Exercise4a {
 
 	public static void main(String[] args) {
 		firstSC fsc=new firstSC();
