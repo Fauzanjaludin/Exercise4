@@ -2,7 +2,8 @@ package abstractb;
 import java.text.DecimalFormat;
 
 abstract class Marks{
-	abstract double getPercentage(double g);
+	abstract double getPercentage();
+
 }
 
 class A extends Marks{
@@ -13,9 +14,9 @@ double sub1,sub2,sub3;
 		this.sub3=c;
 	}
 	
-	double getPercentage(double g) {
+	double getPercentage() {
 		double aa;
-		aa=(g/100)*100;
+		aa=((sub1+sub2+sub3)/300)*100;
 		return aa;
 	}
 }
@@ -29,9 +30,9 @@ class B extends Marks{
 		this.sub4=v;
 	}
 	
-	double getPercentage(double g) {
+	double getPercentage() {
 		double bb;
-		bb=(g/100)*100;
+		bb=((sub1+sub2+sub3+sub4)/400)*100;
 		return bb;
 	}	
 }
@@ -43,13 +44,9 @@ public class Exercise4c {
 		A a= new A(50,94.3,79.5);
 		B b= new B(63,69.9,93.7,86.9);
 		
-		System.out.println("Student A Subject 1 Percentage :"+df.format(a.getPercentage(a.sub1))+"%");
-		System.out.println("Student A Subject 2 Percentage :"+df.format(a.getPercentage(a.sub2))+"%");
-		System.out.println("Student A Subject 3 Percentage :"+df.format(a.getPercentage(a.sub3))+"%");
+		System.out.println("Student A Subject Percentage :"+df.format(a.getPercentage())+"%");
+
+		System.out.println("Student B Subject Percentage :"+df.format(b.getPercentage())+"%");
 		
-		System.out.println("Student B Subject 1 Percentage :"+df.format(b.getPercentage(b.sub1))+"%");
-		System.out.println("Student B Subject 2 Percentage :"+df.format(b.getPercentage(b.sub2))+"%");
-		System.out.println("Student B Subject 3 Percentage :"+df.format(b.getPercentage(b.sub3))+"%");
-		System.out.println("Student B Subject 4 Percentage :"+df.format(b.getPercentage(b.sub4))+"%");
 	}
 }
